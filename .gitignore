@@ -1,0 +1,22 @@
+# Large raw datasets (>50MB, exceeds GitHub limit)
+data/creditcard.csv
+data/openml/
+*.gz
+*.zip
+
+# Python compiled bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual Environments
+venv/
+.venv/
+env/
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
