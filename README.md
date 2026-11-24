@@ -98,29 +98,28 @@ Evaluated on the Kaggle Credit Card Fraud test set (10,000 stratified transactio
 
 ---
 
-## 🚀 5. How to Run the Application
+## 🚀 5. How to Deploy Live & Share
 
-### 5.1 Prerequisites
-Ensure Python 3.10+ (or 3.14) is installed.
+### 5.1 Push to GitHub (Large Files Resolved)
+The raw Kaggle dataset (`creditcard.csv`, 148MB) has been safely excluded via `.gitignore` to conform to GitHub's 100MB limit. The high-fidelity representative sample and pre-trained models remain fully tracked.
 
-### 5.2 Installation
-Open your terminal in the project directory:
-
+Push your code to GitHub:
 ```bash
-cd "C:\Users\ayyap\.gemini\antigravity\scratch\credit_card_fraud_detection"
-pip install -r requirements.txt
+git push -u origin main --force
 ```
 
-### 5.3 Launch the Streamlit Dashboard
-```bash
-streamlit run app.py
-```
-Or directly with the specific Python binary:
-```bash
-& "C:\Users\ayyap\AppData\Local\Programs\Python\Python314\python.exe" -m streamlit run app.py
-```
+### 5.2 Option A: Deploy on Vercel (Serverless Web Dashboard & API)
+This repository is configured with `vercel.json` and a serverless entrypoint `api/index.py`:
+1. Go to **[vercel.com](https://vercel.com)** and sign in with GitHub.
+2. Click **"Add New..."** -> **"Project"**.
+3. Select your repository: `credit-card-fraud-detection`.
+4. Click **"Deploy"**. Vercel will automatically build and provide a live public HTTPS URL!
 
-The application will open in your default browser at `http://localhost:8501`.
+### 5.3 Option B: Deploy on Streamlit Community Cloud (Full Python Dashboard)
+To run the full 5-tab Streamlit dashboard (`app.py`) on the cloud:
+1. Go to **[share.streamlit.io](https://share.streamlit.io)**.
+2. Select your repository and set Main file path to `app.py`.
+3. Click **"Deploy"** for a free public `.streamlit.app` link.
 
 ---
 
